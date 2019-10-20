@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <data version="1">
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <VassalVersion>3.2.17</VassalVersion>
-  <dateSaved>1571435375732</dateSaved>
+  <dateSaved>1571553865254</dateSaved>
   <description></description>
   <name>Capture of the territory</name>
   <name lang="Захват территории">ru</name>

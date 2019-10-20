@@ -1,0 +1,5 @@
+List of TODO items
+
+ * Change captured tile without change and buildings on top of it
+ * Add support to maps of any size, (eg, 10x10, 5x8)
+ * Add more then 2 players
