@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<VASSAL.launch.BasicModule VassalVersion="3.2.17" description="" name="Capture of the territory" nextPieceSlotId="28" version="0.1.0">
+<VASSAL.launch.BasicModule VassalVersion="3.2.17" description="" name="Capture of the territory" nextPieceSlotId="28" version="0.2.0">
     <VASSAL.build.module.BasicCommandEncoder/>
     <VASSAL.build.module.Documentation>
         <VASSAL.build.module.documentation.AboutScreen fileName="Splash.png" title="About Module"/>
@@ -39,6 +39,7 @@
         <VASSAL.build.module.properties.GlobalProperties/>
         <VASSAL.build.module.map.SelectionHighlighters/>
         <VASSAL.build.module.map.HighlightLastMoved color="0,255,255" enabled="true" thickness="2"/>
+        <VASSAL.build.module.map.LayeredPieceCollection layerOrder="Terrain" property="Layer"/>
     </VASSAL.build.module.Map>
     <VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
         <VASSAL.build.module.gamepieceimage.ColorManager>
@@ -73,25 +74,25 @@
     </VASSAL.build.module.gamepieceimage.GamePieceImageDefinitions>
     <VASSAL.build.module.properties.GlobalProperties/>
     <VASSAL.build.module.PrototypesContainer>
-        <VASSAL.build.module.PrototypeDefinition name="Building">+/null/prototype;Basic	immob;;V\	piece;;;;/	\	null;260;0;</VASSAL.build.module.PrototypeDefinition>
-        <VASSAL.build.module.PrototypeDefinition name="Basic">+/null/clone;Clone;67,130	delete;Delete;68,130\	piece;;;;/	\	null;0;0;</VASSAL.build.module.PrototypeDefinition>
-        <VASSAL.build.module.PrototypeDefinition name="Territory">+/null/immob;c;V	prototype;Basic\	piece;;;;/	\	null;260;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Building">+/null/immob;n;V	piece;;;;/	null;260;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Basic">+/null/delete;Delete;68,130	piece;;;;/	null;244;0;</VASSAL.build.module.PrototypeDefinition>
+        <VASSAL.build.module.PrototypeDefinition name="Territory">+/null/delete;Delete;68,130	mark;Layer\	immob;;V\\	piece;;;;/	Terrain\	\\	null;271;0;</VASSAL.build.module.PrototypeDefinition>
         <VASSAL.build.module.PrototypeDefinition name="Pawn">+/null/nonRect;m,-5,-15,l,-5,-14,l,-8,-14,l,-8,-13,l,-9,-13,l,-9,-12,l,-10,-12,l,-10,-11,l,-12,-11,l,-12,-10,l,-12,-9,l,-13,-9,l,-13,-8,l,-14,-8,l,-14,-7,l,-14,-6,l,-15,-6,l,-15,-5,l,-15,-4,l,-15,-3,l,-15,-2,l,-15,-1,l,-15,0,l,-15,1,l,-15,2,l,-15,3,l,-15,4,l,-15,5,l,-15,6,l,-14,6,l,-14,7,l,-14,8,l,-13,8,l,-13,9,l,-13,10,l,-12,10,l,-12,11,l,-11,11,l,-11,12,l,-10,12,l,-10,13,l,-9,13,l,-9,14,l,-7,14,l,-7,15,l,-5,15,l,-5,16,l,6,16,l,6,15,l,8,15,l,8,14,l,10,14,l,10,13,l,11,13,l,11,12,l,12,12,l,12,11,l,13,11,l,13,10,l,14,10,l,14,9,l,14,8,l,15,8,l,15,7,l,15,6,l,16,6,l,16,5,l,16,4,l,16,3,l,16,2,l,16,1,l,16,0,l,16,-1,l,16,-2,l,16,-3,l,16,-4,l,16,-5,l,15,-5,l,15,-6,l,15,-7,l,14,-7,l,14,-8,l,14,-9,l,13,-9,l,13,-10,l,12,-10,l,12,-11,l,11,-11,l,11,-12,l,10,-12,l,10,-13,l,8,-13,l,8,-14,l,6,-14,l,6,-15,c	piece;;;;/	null;0;0;</VASSAL.build.module.PrototypeDefinition>
     </VASSAL.build.module.PrototypesContainer>
     <VASSAL.build.module.PieceWindow hidden="false" hotkey="" icon="" name="" text="Pieces" tooltip="Show/Hide the Pieces window">
         <VASSAL.build.widget.TabWidget entryName="Pieces">
             <VASSAL.build.widget.PanelWidget entryName="Territory" fixed="false" nColumns="4" vert="false">
-                <VASSAL.build.widget.PieceSlot entryName="Captured by Red" gpid="15" height="50" width="50">+/null/prototype;Territory	piece;;;Captured by Red;Captured by Red/	null;0;0;15</VASSAL.build.widget.PieceSlot>
-                <VASSAL.build.widget.PieceSlot entryName="Captured by Gray" gpid="26" height="50" width="50">+/null/prototype;Territory	piece;;;Captured by Gray;Captured by Gray/	null;0;0;26</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Captured by Red" gpid="15" height="50" width="50">+/null/prototype;Territory	piece;;;Captured by Red;Captured by Red/	null;78;62;15</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Captured by Gray" gpid="26" height="50" width="50">+/null/prototype;Territory	piece;;;Captured by Gray;Captured by Gray/	null;78;62;26</VASSAL.build.widget.PieceSlot>
             </VASSAL.build.widget.PanelWidget>
             <VASSAL.build.widget.PanelWidget entryName="Pawns" fixed="true" nColumns="2" vert="false">
-                <VASSAL.build.widget.PieceSlot entryName="Red" gpid="7" height="50" width="50">+/null/prototype;Pawn	prototype;Basic\	piece;;;Red Pawn;Red/	\	null;0;0;7</VASSAL.build.widget.PieceSlot>
-                <VASSAL.build.widget.PieceSlot entryName="Gray" gpid="8" height="50" width="50">+/null/prototype;Pawn	prototype;Basic\	piece;;;Gray Pawn;Gray/	\	null;0;0;8</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Red" gpid="7" height="50" width="50">+/null/prototype;Pawn	prototype;Basic\	piece;;;Red Pawn;Red/	\	null;78;62;7</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Gray" gpid="8" height="50" width="50">+/null/prototype;Pawn	prototype;Basic\	piece;;;Gray Pawn;Gray/	\	null;78;62;8</VASSAL.build.widget.PieceSlot>
             </VASSAL.build.widget.PanelWidget>
             <VASSAL.build.widget.PanelWidget entryName="Buildings" fixed="false" nColumns="3" vert="false">
-                <VASSAL.build.widget.PieceSlot entryName="Town" gpid="9" height="50" width="50">+/null/prototype;Building	piece;;;Town;Town/	null;0;0;9</VASSAL.build.widget.PieceSlot>
-                <VASSAL.build.widget.PieceSlot entryName="Road" gpid="12" height="50" width="50">+/null/prototype;Building	piece;;;Road;Road/	null;0;0;12</VASSAL.build.widget.PieceSlot>
-                <VASSAL.build.widget.PieceSlot entryName="Wall" gpid="13" height="50" width="50">+/null/prototype;Building	piece;;;Wall;Wall/	null;0;0;13</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Town" gpid="9" height="50" width="50">+/null/nonRect;m,-8,-8,l,-8,-7,l,-8,-6,l,-8,-5,l,-8,-4,l,-8,-3,l,-8,-2,l,-8,-1,l,-8,0,l,-9,0,l,-9,1,l,-8,1,l,-8,2,l,-8,3,l,-8,4,l,-8,5,l,-8,6,l,-8,7,l,8,7,l,8,6,l,8,5,l,8,4,l,8,3,l,8,2,l,8,1,l,8,0,l,8,-1,l,8,-2,l,8,-3,l,8,-4,l,8,-5,l,8,-6,l,8,-7,l,8,-8,c,m,-9,8,l,-9,9,l,-6,9,l,-6,8,c	prototype;Building\	piece;;;Town;Town/	\	null;52;62;9</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Road" gpid="12" height="50" width="50">+/null/nonRect;m,-5,-25,l,-5,-24,l,-5,-23,l,-5,-22,l,-5,-21,l,-5,-20,l,-5,-19,l,-5,-18,l,-5,-17,l,-5,-16,l,-5,-15,l,-5,-14,l,-5,-13,l,-5,-12,l,-5,-11,l,-5,-10,l,-5,-9,l,-5,-8,l,-5,-7,l,-5,-6,l,-5,-5,l,-25,-5,l,-25,-4,l,-25,-3,l,-4,-3,l,-4,-4,l,-3,-4,l,-3,-5,l,-3,-6,l,-3,-7,l,-3,-8,l,-3,-9,l,-3,-10,l,-3,-11,l,-3,-12,l,-3,-13,l,-3,-14,l,-3,-15,l,-3,-16,l,-3,-17,l,-3,-18,l,-3,-19,l,-3,-20,l,-3,-21,l,-3,-22,l,-3,-23,l,-3,-24,l,-3,-25,c,m,3,-25,l,3,-24,l,3,-23,l,3,-22,l,3,-21,l,3,-20,l,3,-19,l,3,-18,l,3,-17,l,3,-16,l,3,-15,l,3,-14,l,3,-13,l,3,-12,l,3,-11,l,3,-10,l,3,-9,l,3,-8,l,3,-7,l,3,-6,l,3,-5,l,3,-4,l,4,-4,l,4,-3,l,25,-3,l,25,-4,l,25,-5,l,5,-5,l,5,-6,l,5,-7,l,5,-8,l,5,-9,l,5,-10,l,5,-11,l,5,-12,l,5,-13,l,5,-14,l,5,-15,l,5,-16,l,5,-17,l,5,-18,l,5,-19,l,5,-20,l,5,-21,l,5,-22,l,5,-23,l,5,-24,l,5,-25,c,m,-25,3,l,-25,4,l,-25,5,l,-5,5,l,-5,6,l,-5,7,l,-5,8,l,-5,9,l,-5,10,l,-5,11,l,-5,12,l,-5,13,l,-5,14,l,-5,15,l,-5,16,l,-5,17,l,-5,18,l,-5,19,l,-5,20,l,-5,21,l,-5,22,l,-5,23,l,-5,24,l,-5,25,l,-3,25,l,-3,24,l,-3,23,l,-3,22,l,-3,21,l,-3,20,l,-3,19,l,-3,18,l,-3,17,l,-3,16,l,-3,15,l,-3,14,l,-3,13,l,-3,12,l,-3,11,l,-3,10,l,-3,9,l,-3,8,l,-3,7,l,-3,6,l,-3,5,l,-3,4,l,-4,4,l,-4,3,c,m,4,3,l,4,4,l,3,4,l,3,5,l,3,6,l,3,7,l,3,8,l,3,9,l,3,10,l,3,11,l,3,12,l,3,13,l,3,14,l,3,15,l,3,16,l,3,17,l,3,18,l,3,19,l,3,20,l,3,21,l,3,22,l,3,23,l,3,24,l,3,25,l,5,25,l,5,24,l,5,23,l,5,22,l,5,21,l,5,20,l,5,19,l,5,18,l,5,17,l,5,16,l,5,15,l,5,14,l,5,13,l,5,12,l,5,11,l,5,10,l,5,9,l,5,8,l,5,7,l,5,6,l,5,5,l,25,5,l,25,4,l,25,3,c	prototype;Building\	piece;;;Road;Road/	\	null;0;0;12</VASSAL.build.widget.PieceSlot>
+                <VASSAL.build.widget.PieceSlot entryName="Wall" gpid="13" height="50" width="50">+/null/nonRect;m,-22,-22,l,-22,-21,l,-22,-20,l,-22,-19,l,-22,-18,l,-22,-17,l,-22,-16,l,-22,-15,l,-22,-14,l,-22,-13,l,-22,-12,l,-22,-11,l,-22,-10,l,-22,-9,l,-22,-8,l,-17,-8,l,-17,-9,l,-17,-10,l,-20,-10,l,-20,-11,l,-20,-12,l,-20,-13,l,-20,-14,l,-20,-15,l,-20,-16,l,-20,-17,l,-20,-18,l,-20,-19,l,-20,-20,l,-10,-20,l,-10,-19,l,-10,-18,l,-10,-17,l,-8,-17,l,-8,-18,l,-8,-19,l,-8,-20,l,-8,-21,l,-8,-22,c,m,8,-22,l,8,-21,l,8,-20,l,8,-19,l,8,-18,l,8,-17,l,10,-17,l,10,-18,l,10,-19,l,10,-20,l,20,-20,l,20,-19,l,20,-18,l,20,-17,l,20,-16,l,20,-15,l,20,-14,l,20,-13,l,20,-12,l,20,-11,l,20,-10,l,17,-10,l,17,-9,l,17,-8,l,22,-8,l,22,-9,l,22,-10,l,22,-11,l,22,-12,l,22,-13,l,22,-14,l,22,-15,l,22,-16,l,22,-17,l,22,-18,l,22,-19,l,22,-20,l,22,-21,l,22,-22,c,m,-22,8,l,-22,9,l,-22,10,l,-22,11,l,-22,12,l,-22,13,l,-22,14,l,-22,15,l,-22,16,l,-22,17,l,-22,18,l,-22,19,l,-22,20,l,-22,21,l,-22,22,l,-8,22,l,-8,21,l,-8,20,l,-8,19,l,-8,18,l,-8,17,l,-10,17,l,-10,18,l,-10,19,l,-10,20,l,-20,20,l,-20,19,l,-20,18,l,-20,17,l,-20,16,l,-20,15,l,-20,14,l,-20,13,l,-20,12,l,-20,11,l,-20,10,l,-17,10,l,-17,9,l,-17,8,c,m,17,8,l,17,9,l,17,10,l,20,10,l,20,11,l,20,12,l,20,13,l,20,14,l,20,15,l,20,16,l,20,17,l,20,18,l,20,19,l,20,20,l,10,20,l,10,19,l,10,18,l,10,17,l,8,17,l,8,18,l,8,19,l,8,20,l,8,21,l,8,22,l,22,22,l,22,21,l,22,20,l,22,19,l,22,18,l,22,17,l,22,16,l,22,15,l,22,14,l,22,13,l,22,12,l,22,11,l,22,10,l,22,9,l,22,8,c	prototype;Building\	piece;;;Wall;Wall/	\	null;0;0;13</VASSAL.build.widget.PieceSlot>
             </VASSAL.build.widget.PanelWidget>
         </VASSAL.build.widget.TabWidget>
     </VASSAL.build.module.PieceWindow>
@@ -102,7 +103,7 @@
     </VASSAL.i18n.Language>
     <VASSAL.build.module.NotesWindow buttonText="Notes" hotkey="" icon="/images/notes.gif" tooltip="Notes to write rules during game"/>
     <VASSAL.build.module.SpecialDiceButton format="** $name$ = [$result1$] *** &lt;$PlayerName$&gt;" hotkey="" icon="" name="Empty" resultButton="true" resultChatter="true" resultWindow="false" text="Empty" tooltip="Empty" windowTitleResultFormat="$name$" windowX="16" windowY="16">
-        <VASSAL.build.module.SpecialDie format="If empty $result$" name="Empty">
+        <VASSAL.build.module.SpecialDie format="$result$" name="Empty">
             <VASSAL.build.module.SpecialDieFace icon="minusone.png" text="Minus one" value="1"/>
             <VASSAL.build.module.SpecialDieFace icon="nothing.png" text="Nothing" value="2"/>
             <VASSAL.build.module.SpecialDieFace icon="nothing.png" text="Nothing" value="3"/>
@@ -112,7 +113,7 @@
         </VASSAL.build.module.SpecialDie>
     </VASSAL.build.module.SpecialDiceButton>
     <VASSAL.build.module.SpecialDiceButton format="** $name$ = [$result1$] *** &lt;$PlayerName$&gt;" hotkey="" icon="" name="Occupied" resultButton="true" resultChatter="true" resultWindow="false" text="Occupied" tooltip="Occupied" windowTitleResultFormat="$name$" windowX="16" windowY="16">
-        <VASSAL.build.module.SpecialDie format="if occupied $result$" name="Occupied">
+        <VASSAL.build.module.SpecialDie format="$result$" name="Occupied">
             <VASSAL.build.module.SpecialDieFace icon="minusone.png" text="Minus one" value="1"/>
             <VASSAL.build.module.SpecialDieFace icon="nothing.png" text="Nothing" value="2"/>
             <VASSAL.build.module.SpecialDieFace icon="nothing.png" text="Nothing" value="3"/>
@@ -154,5 +155,5 @@
     <VASSAL.build.module.DiceButton addToTotal="0" hotkey="" icon="" nDice="1" nSides="6" name="1d6" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$PlayerName$&gt;" reportTotal="false" sortDice="false" text="⚄" tooltip="Throw 1d6"/>
     <VASSAL.build.module.DiceButton addToTotal="0" hotkey="" icon="" nDice="2" nSides="6" name="2d6" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$PlayerName$&gt;" reportTotal="false" sortDice="false" text="⚄⚃" tooltip="Throw 2d6"/>
     <VASSAL.build.module.DiceButton addToTotal="0" hotkey="" icon="" nDice="3" nSides="6" name="3d6" plus="0" prompt="false" reportFormat="** $name$ = $result$ *** &lt;$PlayerName$&gt;" reportTotal="false" sortDice="false" text="⚄⚂⚃" tooltip="Throw 3d6"/>
-    <VASSAL.build.module.PredefinedSetup file="5x5_startup.vlog" isMenu="false" name="5x5 2 Player" useFile="true"/>
+    <VASSAL.build.module.PredefinedSetup file="5x5_startup.vlog" isMenu="false" name="5x5 2 Players" useFile="true"/>
 </VASSAL.launch.BasicModule>
