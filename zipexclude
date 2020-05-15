@@ -1,0 +1,6 @@
+VASSAL-SRC/*
+zap/*
+.*
+.swp
+*.java
+Makefile
