@@ -4,7 +4,9 @@ import zxvt.IsometricGridNumbering;
 
 import VASSAL.build.module.map.boardPicker.board.GeometricGrid;
 import VASSAL.build.module.map.boardPicker.board.mapgrid.GridNumbering;
+import VASSAL.build.module.documentation.HelpFile;
 import VASSAL.build.AbstractConfigurable;
+import VASSAL.build.Buildable;
 
 import java.awt.Point;
 import java.awt.geom.Area;
@@ -16,8 +18,41 @@ public class IsometricGrid extends AbstractConfigurable implements GeometricGrid
         return null;
     }
 
-    public abstract String[] getAttributeDescriptions() {
+    @Override
+    public String[] getAttributeDescriptions() {
+        return null;
+    }
+
+    @Override
+    public String getAttributeValueString(String key) {
         return "";
+    }
+
+    @Override
+    public void setAttribute(String key, Object value) {
+    }
+
+    @Override
+    public String[] getAttributeNames() {
+        return null;
+    }
+
+    @Override
+    public void addTo(Buildable parent) {
+    }
+
+    @Override
+    public Class[] getAllowableConfigureComponents() {
+        return null;
+    }
+
+    @Override
+    public HelpFile getHelpFile() {
+        return new HelpFile();
+    }
+
+    @Override
+    public void removeFrom(Buildable parent) {
     }
 
     @Override
