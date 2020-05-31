@@ -4,3 +4,6 @@ zap/*
 .swp
 *.java
 Makefile
+tags
+javaargs
+zipexclude
