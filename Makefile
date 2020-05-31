@@ -1,8 +1,7 @@
 NAME := zxvt
 VMOD := ../$(NAME).vmod
 
-JAVAC_ARGS      := -Xlint
-JAVAC           := javac
+JAVAC           := javac$(if $(VERBOSE), -verbose,)
 RM              := rm
 
 JAVA_PACKAGE    := $(NAME)
@@ -16,8 +15,8 @@ export CLASSPATH
 $(VMOD): $(JAVA_CLASSFILES)
 	zip -r $@ . --exclude @zipexclude
 
-%.class: %.java
-	$(JAVAC) $(JAVAC_ARGS) $<
+%.class: %.java javaargs
+	$(JAVAC) $(JAVAC_ARGS) $(word 1,$^) @$(word 2,$^)
 
 .PHONY: clean
 clean: F += $(JAVA_CLASSFILES)
