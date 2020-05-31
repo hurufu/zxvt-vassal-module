@@ -1,6 +1,7 @@
 package zxvt;
 
 import zxvt.IsometricGrid;
+import zxvt.Attribute;
 import VASSAL.build.AbstractConfigurable;
 import VASSAL.build.Buildable;
 import VASSAL.build.module.documentation.HelpFile;
@@ -79,24 +80,6 @@ public class ConfigurableIsometricGrid extends AbstractConfigurable {
     public void addTo(Buildable parent) {
         GridContainer container = (GridContainer) parent;
         container.setGrid(mGrid);
-    }
-
-    private class Attribute<Type> {
-        private final Class<Type> type;
-        public Type value;
-        public final String key;
-        public final String description;
-
-        public Attribute(final Class<Type> t, final String k, final Type v, final String d) {
-            this.type = t;
-            this.key = k;
-            this.value = v;
-            this.description = d;
-        }
-
-        public void setValue(final Object v) {
-            value = type.cast(v);
-        }
     }
 
 }
