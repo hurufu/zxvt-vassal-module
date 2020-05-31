@@ -47,7 +47,12 @@ public class ConfigurableIsometricGrid extends AbstractConfigurable {
     public void setAttribute(final String key, final Object value) {
         for (int i = 0; i < mAttrs.length; i++) {
             if (mAttrs[i].key == key) {
-                mAttrs[i].setValue(value);
+                try {
+                    mAttrs[i].setValue(value);
+                } catch (final BadAttributeException e) {
+                    // Just ignore
+                    return;
+                }
             }
         }
     }
