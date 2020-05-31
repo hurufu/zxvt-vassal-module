@@ -10,7 +10,7 @@ import java.awt.geom.Area;
 
 public class IsometricGrid implements GeometricGrid {
 
-    private GridNumbering mNumbering;
+    private GridNumbering mNumbering = new IsometricGridNumbering();
 
     @Override
     public Area getGridShape(final Point center, final int range) {
