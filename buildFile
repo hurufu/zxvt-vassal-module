@@ -24,6 +24,7 @@
                     <VASSAL.build.module.map.boardPicker.board.mapgrid.SquareGridNumbering color="0,0,0" first="H" fontSize="9" hDescend="false" hDrawOff="0" hLeading="1" hOff="1" hType="A" locationFormat="$gridLocation$" rotateText="0" sep="" vDescend="false" vDrawOff="0" vLeading="1" vOff="1" vType="N" visible="false"/>
                 </VASSAL.build.module.map.boardPicker.board.SquareGrid>
             </VASSAL.build.module.map.boardPicker.Board>
+            <VASSAL.build.module.map.boardPicker.Board height="500" name="7x7 Isometric" reversible="false" width="500"/>
         </VASSAL.build.module.map.BoardPicker>
         <VASSAL.build.module.map.StackMetrics bottom="40,0" disabled="false" down="37,0" exSepX="6" exSepY="18" top="38,0" unexSepX="2" unexSepY="4" up="39,0"/>
         <VASSAL.build.module.map.ForwardToKeyBuffer/>
