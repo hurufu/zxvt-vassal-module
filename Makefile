@@ -3,6 +3,7 @@ VMOD := ../$(NAME).vmod
 
 JAVAC_ARGS      := -Xlint
 JAVAC           := javac
+RM              := rm
 
 JAVA_PACKAGE    := $(NAME)
 JAVA_SOURCES    := $(wildcard $(JAVA_PACKAGE)/*.java)
@@ -17,3 +18,8 @@ $(VMOD): $(JAVA_CLASSFILES)
 
 %.class: %.java
 	$(JAVAC) $(JAVAC_ARGS) $<
+
+.PHONY: clean
+clean: F += $(JAVA_CLASSFILES)
+clean:
+	$(if $(strip $(sort $(wildcard $F))),$(RM) -- $F,)
